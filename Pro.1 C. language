@@ -1,0 +1,21 @@
+/** WRITING  A PROGRAM TO CALCULATE SIMPLE INTREST AND COMPOUND INTREST BY USING PRINCIPAL,AMOUNT,RATE **/
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float p, r, t, SI, A, CI;
+    printf("Enter the principal amoumt : ");
+    scanf("%f", &p);
+    printf("Enter the rate : ");
+    scanf("%f", &r);
+    printf("Enter the time period in year : ");
+    scanf("%f", &t); // time in year
+    SI = (p * r * t) / 100;
+    printf("%f : Is the simple intrest  \n  ", SI);
+    A = p * pow((1 + (r / 100)), t);
+    printf("%f : Is total amount  \n", A);
+    CI = A - p;
+    printf("%f : Is compound intrest ",CI);
+     return 0;
+}
